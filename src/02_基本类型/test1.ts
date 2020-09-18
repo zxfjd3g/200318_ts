@@ -41,5 +41,49 @@
   tuple = ['abc', 12] 
   // tuple = ['abc', 12, 12]  // error 
 
+  // 7. 枚举  使用枚举类型可以为一组数值赋予友好的名字
+  enum Color {
+    Red,
+    Yellow,
+    Blue
+  }
+  const myColor: Color = Color.Blue // 2
+  console.log(myColor, Color, Color[myColor])
+  enum Color2 {
+    Red = 3,
+    Yellow = 5,
+    Blue = 7
+  }
+
+  console.log(Color2)
+
+  // 8. any
+  let notSure: any = 4
+  notSure = 'maybe a string'
+  notSure = false // 也可以是个 boolean
+  let list: any[] = [1, true, 'free']
+  list[1] = 100
+
+  // 9. void 表示没有任何类型
+  /* 表示没有任何类型, 一般用来说明函数的返回值不能是undefined和null之外的值 */
+  function fn (): void {
+    console.log('fn()')
+    // return null
+    // return undefined
+    // return 1 // error
+  }
+
+  // 10. object
+  function fn2(): object {
+    return {}
+    // return []
+    // return () => {}
+    // return undefined
+    // return null
+    // return 2 // error
+  }
+
+ 
+
 })()
 
